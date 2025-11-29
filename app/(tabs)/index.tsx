@@ -217,7 +217,7 @@ export default function TimerScreen() {
       <StatusBar barStyle="dark-content" backgroundColor="#e3f2fd" />
       <View style={styles.container}>
         <View className="content" style={styles.content}>
-          <Text style={styles.title}>Pomodoro Timer</Text>
+          <Text style={styles.title}>Pomodoro</Text>
 
           {/* Kategori */}
           <View style={styles.section}>
