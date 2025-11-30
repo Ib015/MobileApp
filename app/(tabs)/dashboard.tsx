@@ -64,7 +64,7 @@ useFocusEffect(
     0
   );
 
-  // ---- Son 7 gün bar chart verisi ----
+  // Bar Chart
   const last7Days = (() => {
     const arr: { label: string; total: number }[] = [];
     const now = new Date();
