@@ -22,7 +22,7 @@ const SESSIONS_KEY = "focusSessions";
 
 type FocusSession = {
   id: string;
-  date: string; // ISO string
+  date: string;
   durationMinutes: number;
   category: string;
 };
@@ -102,7 +102,7 @@ export default function TimerScreen() {
     }
   };
 
-  // AppState listener (arka plana düşünce)
+  // AppState listener
   useEffect(() => {
     const handleAppStateChange = (nextAppState: AppStateStatus) => {
       const wasActive = appState.current === "active";
