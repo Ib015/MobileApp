@@ -22,7 +22,7 @@ const SESSIONS_KEY = "focusSessions";
 
 type FocusSession = {
   id: string;
-  date: string;
+  date: string; // ISO string
   durationMinutes: number;
   category: string;
 };
@@ -102,7 +102,7 @@ export default function TimerScreen() {
     }
   };
 
-  // AppState listener
+  // AppState listener (arka plana düşünce)
   useEffect(() => {
     const handleAppStateChange = (nextAppState: AppStateStatus) => {
       const wasActive = appState.current === "active";
@@ -214,10 +214,9 @@ export default function TimerScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle="dark-content" backgroundColor="#e3f2fd" />
       <View style={styles.container}>
         <View className="content" style={styles.content}>
-          <Text style={styles.title}>Pomodoro</Text>
+          <Text style={styles.title}>Timer</Text>
 
           {/* Kategori */}
           <View style={styles.section}>
@@ -301,11 +300,6 @@ export default function TimerScreen() {
               <Text style={styles.controlButtonText}>Sıfırla</Text>
             </TouchableOpacity>
           </View>
-
-          {/* debug istersen aç: */}
-          {/* <Text style={{ marginTop: 12, color: "#1d3557" }}>
-            Dikkat dağınıklığı: {distractionCount}
-          </Text> */}
         </View>
 
         {/* Kategori Modal */}
@@ -382,8 +376,6 @@ export default function TimerScreen() {
   );
 }
 
-// styles aynı (safeArea, container, content vs) – sende olanı kullanabilirsin
-// (burayı daha önceki versiyonla aynı bırak)
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
