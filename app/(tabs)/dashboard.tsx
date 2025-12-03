@@ -93,7 +93,7 @@ useFocusEffect(
     ],
   };
 
-  // ---- Kategorilere göre dağılım (pie chart) ----
+  // Kategorilere göre dağılım (pie chart)
   const categoryTotals: Record<string, number> = {};
   sessions.forEach((s) => {
     categoryTotals[s.category] =
