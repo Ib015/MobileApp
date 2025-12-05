@@ -52,7 +52,7 @@ useFocusEffect(
   }, [])
 );
 
-  // ---- Genel istatistikler ----
+  // Genel istatistikler
   const todayStr = new Date().toISOString().slice(0, 10);
 
   const todayTotal = sessions
