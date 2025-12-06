@@ -20,6 +20,7 @@ const INITIAL_MINUTES = 25;
 const DISTRACTION_KEY = "distractionCount";
 const SESSIONS_KEY = "focusSessions";
 
+
 type FocusSession = {
   id: string;
   date: string; // ISO string
@@ -45,7 +46,6 @@ export default function TimerScreen() {
 
   const [isCategoryModalVisible, setIsCategoryModalVisible] = useState(false);
   const [newCategory, setNewCategory] = useState("");
-
   const [distractionCount, setDistractionCount] = useState(0);
 
   // AppState için ref'ler
