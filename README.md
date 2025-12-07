@@ -1,3 +1,3 @@
--npm install 
--npm start
+------------npm install---------------
+------------npm start-----------------
 (bilgisayarda node.js kurulu olmalı)
