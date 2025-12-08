@@ -20,7 +20,6 @@ const INITIAL_MINUTES = 25;
 const DISTRACTION_KEY = "distractionCount";
 const SESSIONS_KEY = "focusSessions";
 
-
 type FocusSession = {
   id: string;
   date: string; // ISO string
@@ -112,7 +111,6 @@ export default function TimerScreen() {
       if (wasActive && goingBackground && isRunningRef.current) {
         setIsRunning(false);
         incrementDistraction();
-        // hasStarted true kalıyor → buton "Devam Et"
       }
 
       appState.current = nextAppState;
